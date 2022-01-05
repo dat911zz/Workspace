@@ -1,0 +1,9 @@
+===============================================
+                    -Menu-
+1. Truy cap vao vi tri
+2. Thay doi phan tu
+3. Xoa phan tu
+4. Xoa toan bo 
+5. kich thuoc ArrayList
+6.
+===============================================

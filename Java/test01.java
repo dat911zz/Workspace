@@ -221,12 +221,12 @@ public class test01
         System.out.println("                1. Them phan tu                ");        
         System.out.println("                2. Xoa phan tu                 ");    
         System.out.println("                3. Tim pham tu                 ");
-        System.out.println("                4. Duyet ArrayList             ");
-        System.out.println("                5. Kich thuoc ArrayList        ");        
+        System.out.println("                4. Duyet List             ");
+        System.out.println("                5. Kich thuoc List        ");        
         System.out.println("                6. Truy cap vao vi tri         ");
         System.out.println("                7. Thay doi phan tu            ");
-        System.out.println("                8. Sap xep ArrayList           ");
-        System.out.println("                9. Xoa het ArrayList           ");
+        System.out.println("                8. Sap xep List           ");
+        System.out.println("                9. Xoa het List           ");
         System.out.println("===============================================");
     }
     public final static void clearConsole()  
@@ -302,7 +302,7 @@ public class test01
          
          System.out.println("\nPhan tu nam o vi tri " + n + " la: "+ list.get(n));
     }
-    //====Lấy thông tin phần tử====
+    //====Thay đổi thông tin phần tử====
     //ArrayList
     public static void changeElementInfoArrayList(ArrayList<String> list)
     {
@@ -412,7 +412,7 @@ public class test01
         System.out.print("Nhap gia tri: "); 
         String str = tmp.next(); 
         System.out.print("Phan tu " + str + " co ton tai trong ArrayList hay khong: "); 
-        System.out.print(list.indexOf(str));
+        System.out.print(list.contains(str));
 
         System.out.println();
 
@@ -432,7 +432,7 @@ public class test01
         System.out.print("Nhap gia tri: "); 
         String str = tmp.next(); 
         System.out.print("Phan tu " + str + " co ton tai trong ArrayList hay khong: "); 
-        System.out.print(list.indexOf(str));
+        System.out.print(list.contains(str));
 
         System.out.println();
 

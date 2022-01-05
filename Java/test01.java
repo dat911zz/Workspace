@@ -3,9 +3,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.ListIterator;
-import java.io.File;  // Import the File class
-import java.io.FileNotFoundException;  // Import this class to handle errors
-import java.lang.reflect.Array;
+
 public class test01
 {
     public static void main(String[] args) throws InterruptedException

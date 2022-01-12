@@ -1,0 +1,28 @@
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+    color: red;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 10px solid #ccc;  
+    /* background-clip: content-box; */
+}
+.header:hover{
+    background-color: blueviolet;
+}
+.header:active{
+    background-color: darkgoldenrod;
+}
+
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://image.winudf.com/v2/image1/Y29tLkx1bmEuTmlnaHQuU2t5LldhbGxwYXBlcl9zY3JlZW5fMF8xNTQ3NDY3NzUzXzA0MQ/screen-0.jpg?fakeurl=1&type=.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

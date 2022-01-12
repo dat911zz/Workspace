@@ -1,5 +1,5 @@
 /*==================================*/
-/*Navigation bar*/
+/* Navigation bar
 * {box-sizing: border-box;}
 .topnav {
   overflow: hidden;
@@ -52,37 +52,90 @@
   .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
-}
+} */
 /*==================================*/
 /*Left side*/
 /* {box-sizing: border-box;}*/
-.leftside{
+/* .leftside{
   float: left;
   width: 5em;
   height: 50rem;
   padding: 5rem;
   
   background: rgb(236, 255, 184);
-}
+} */
 
 /*==================================*/
 /*Right side*/
-.rightsize {
+/* .rightsize {
   float: right;
   width: 15em;
   height: 10rem;
   padding-right: 10rem;
   background-color: #e9dede;
   color: aqua;
-}
+} */
 
 .a{
   color: red;
   font-size: 255%;
 } 
+p:hover{
+  color:rgb(122, 26, 167);
+}
+p:active{
+  color: rgb(199, 241, 12);
+}
+.a:shadow{
+  color:rgb(223, 25, 140);
+}
 /* Clear floats after the columns */
-.rightsize::after {
+/* .rightsize::after {
   content: "";
   display: table;
   clear: both;
+} */
+/*Box*/
+.box{
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 30px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 60%;
+  float: left;
+}
+.box:hover{
+  background-color: chartreuse;
+}
+.box:active{
+  background-color: blueviolet;
+}
+.box::selection{
+  background-color: aqua;
+  border: black;
+  
+}
+.box1{
+  background-color: royalblue;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.box2{
+  padding: 20px;
+  background-color: red;
+  margin-top: 30px;
+  margin-left: 10px;
+  /* border-radius: calc(30%); */
+}
+.box3{
+  padding: 30px;
+  background-color: gold;
+  margin-top: 50px;
+  margin-left: 10px;
 }

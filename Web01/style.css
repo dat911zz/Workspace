@@ -103,10 +103,11 @@ p:active{
   display: flex;
   align-items: center;
   justify-content: center;
-  border-width: 50px;
+  border-width: 30px;
   border-style: solid;
   border-color: black;
-  border-radius: 70%;
+  border-radius: 60%;
+  float: left;
 }
 .box:hover{
   background-color: chartreuse;
@@ -122,14 +123,19 @@ p:active{
 .box1{
   background-color: royalblue;
   padding: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 .box2{
   padding: 20px;
   background-color: red;
+  margin-top: 30px;
+  margin-left: 10px;
   /* border-radius: calc(30%); */
 }
 .box3{
   padding: 30px;
   background-color: gold;
-  
+  margin-top: 50px;
+  margin-left: 10px;
 }

@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>B2</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="B2.css">
-    </head>
-    <body>       
-        <div class="header">Hello World</div>
-        <div class="background"></div>
-    </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  <div class="snowflakes" aria-hidden="true">
-  <div class="snowflake">❅</div>
-  <div class="snowflake">❆</div>
-  <div class="snowflake">❅</div>
-  <div class="snowflake">❆</div>
-  <div class="snowflake">❅</div>
-  <div class="snowflake">❆</div>
-  <div class="snowflake">❅</div>
-  <div class="snowflake">❆</div>
-  <div class="snowflake">❅</div>
-  <div class="snowflake">❆</div>
-  <div class="snowflake">❅</div>
-  <div class="snowflake">❆</div>
-</div>
 
-
-<style>
   @-webkit-keyframes snowflakes-fall {
     0% {top:-10%}
     100% {top:100%}
@@ -106,4 +75,3 @@
   .snowflake:nth-of-type(11){
     left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s
   }
-</style>

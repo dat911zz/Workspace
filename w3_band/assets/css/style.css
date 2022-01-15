@@ -30,15 +30,23 @@ html{
     background-color: #000;
 }
 
-#nav{
+#nav, .subnav{
+    list-style-type: none;
+}
 
+#nav > li{
+    display: inline-block;  
 }
 
 #nav li{
-    display: inline-block;
+    position: relative;
 }
 
-
+#nav > li > a{
+    color: #fff;
+    display: inline;
+    text-transform: uppercase;
+}
 
 #nav li a{
     color: #fff;
@@ -48,17 +56,50 @@ html{
     display: inline-block;
 }
 
-#nav li:hover a{
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav li:hover a,
+#nav > li:hover > a{
     color: #000;
     background-color: #ccc;
+    display: block;
 }
 
 #nav .subnav{
     display: none;
+    min-width: 160px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 8px #888888;
+    animation: mymove 5s infinite;
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down{
+    font-size: 10px;
+}
+
+#header .search-btn{
+
+}
+
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
 }
 
 #slider{
-
+    min-height: 500px;
+    background-color: #333;
+    box-shadow: 0 -10px 20px rgb(206, 34, 221);
+    animation: mymove 5s infinite;
 }
 
 #content{
@@ -67,4 +108,15 @@ html{
 
 #footer{
 
+}
+
+
+  
+@keyframes mymove {
+    0% {box-shadow: 0 -10px 40px rgb(206, 34, 221);}
+    10% {box-shadow: 0 -10px 40px rgb(193, 55, 206);}
+    30% {box-shadow: 0 -10px 30px rgb(234, 1, 255);}
+    50% {box-shadow: 0 -10px 20px rgb(162, 13, 175);}
+    70% {box-shadow: 0 -10px 30px rgb(206, 34, 221);}
+    100% {box-shadow: 0 -10px 40px rgb(206, 34, 221);}
 }

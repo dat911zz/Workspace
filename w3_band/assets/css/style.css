@@ -28,6 +28,15 @@ html{
 #header{
     height: 46px;
     background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: keyFrame_shadow_in 5s infinite;
+}
+
+#nav{
+    display: inline-block;
 }
 
 #nav, .subnav{
@@ -73,7 +82,7 @@ html{
     position: absolute;
     background-color: #fff;
     box-shadow: 0 0 8px #888888;
-    animation: mymove 5s infinite;
+    animation: keyFrame_shadow_out 5s infinite;
 }
 
 #nav .subnav a {
@@ -87,19 +96,26 @@ html{
 }
 
 #header .search-btn{
+    float: right;
+    padding: 0 21px;
+}
 
+#header .search-btn:hover{
+    background-color: #f44336;
 }
 
 #header .search-icon{
     color: #fff;
     font-size: 20px;
+    line-height: 46px;
 }
 
 #slider{
     min-height: 500px;
     background-color: #333;
     box-shadow: 0 -10px 20px rgb(206, 34, 221);
-    animation: mymove 5s infinite;
+    margin-top: 46px;
+    padding-top: 50%;
 }
 
 #content{
@@ -112,11 +128,19 @@ html{
 
 
   
-@keyframes mymove {
-    0% {box-shadow: 0 -10px 40px rgb(206, 34, 221);}
-    10% {box-shadow: 0 -10px 40px rgb(193, 55, 206);}
-    30% {box-shadow: 0 -10px 30px rgb(234, 1, 255);}
-    50% {box-shadow: 0 -10px 20px rgb(162, 13, 175);}
-    70% {box-shadow: 0 -10px 30px rgb(206, 34, 221);}
-    100% {box-shadow: 0 -10px 40px rgb(206, 34, 221);}
+@keyframes keyFrame_shadow_in {
+    0% {box-shadow: 0 -10px 40px rgb(206, 34, 221) inset;}
+    10% {box-shadow: 0 -10px 40px rgb(193, 55, 206) inset;}
+    30% {box-shadow: 0 -10px 30px rgb(234, 1, 255) inset;}
+    50% {box-shadow: 0 -10px 20px rgb(162, 13, 175) inset;}
+    70% {box-shadow: 0 -10px 30px rgb(206, 34, 221) inset;}
+    100% {box-shadow: 0 -10px 40px rgb(206, 34, 221) inset;}
+}
+@keyframes keyFrame_shadow_out {
+    0% {box-shadow: 0 -10px 40px rgb(206, 34, 221) ;}
+    10% {box-shadow: 0 -10px 40px rgb(193, 55, 206) ;}
+    30% {box-shadow: 0 -10px 30px rgb(234, 1, 255) ;}
+    50% {box-shadow: 0 -10px 20px rgb(162, 13, 175) ;}
+    70% {box-shadow: 0 -10px 30px rgb(206, 34, 221) ;}
+    100% {box-shadow: 0 -10px 40px rgb(206, 34, 221) ;}
 }

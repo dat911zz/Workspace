@@ -20,6 +20,14 @@ html{
 3. Màu sắc
 4. Kiểu dáng (kiểu chữ, hình tròn, vuông ,...)
 */
+.clear{
+    clear: both;
+}
+.text-white{
+    color: #fff !important;
+}
+
+
 
 #main{
 
@@ -29,6 +37,7 @@ html{
     height: 46px;
     background-color: #000;
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
@@ -111,19 +120,145 @@ html{
 }
 
 #slider{
-    min-height: 500px;
-    background-color: #333;
+    /* min-height: 500px; */
+    position: relative;
+    /* background-color: #333; */
+    background: url("/w3_band/assets/img/pan2.png");
+    background: url("../img/Pantheon.png") top center / cover no-repeat;
     box-shadow: 0 -10px 20px rgb(206, 34, 221);
     margin-top: 46px;
     padding-top: 50%;
 }
 
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+}
+#slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+}
+
 #content{
+    height: 1000px;
+}
+
+#content .content-section{
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+#content .section-slogan{
+    font-size: 15px;
+    margin-top: 25px;
+    opacity: 0.6;
+    text-align: center;
+    font-style: italic;
+}
+#content .about{
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+}
+#content .member-item{
+    float: left;
+    text-align: center;
+    /* padding: 12px 16px; */
+}
+#content .member-list{
+   display: flex;
+   flex-basis: 30%;
+   justify-content: space-around;
+   margin-top: 46px;
+}
+#content .member-name{
+    font-size: 15px;
+}
+#content .member-img{
+    margin-top:  15px;
+    width: 153.5px;
+    image-rendering: auto;
+    border-radius: 4px;
+}
+
+/* Tour section */
+.tour-section{
+    background-color: #000;
+}
+.ticket-list{
+    background-color: #fff;
+    margin-top: 40px;
+}
+.ticket-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+}
+.ticket-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.ticket-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+    
+}
+/* Places */
+.places-list{
+    margin-top: 32px;
+    
+}
+.place-item{
+    float: left;
+    width: calc(100%/3);
+}
+.place-img{
+    width: 100%;
+}
+.place-body{
+
+}
+.place-heading{
+
+}
+.place-time{
+
+}
+.place-desc{
+
+}
+.place-buy-btn{
 
 }
 
+/* Footer section */
 #footer{
-
+    
 }
 
 

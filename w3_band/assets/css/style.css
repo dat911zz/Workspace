@@ -273,11 +273,54 @@ html{
 .place-buy-btn:hover{
     background-color: #ccc;
 }
+
 /* Footer section */
 #footer{
     
 }
 
+/* Modal */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-container{
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+}
+.modal-header{
+    background: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+.m-h-icon{
+    padding-right: 16px;
+}
+i.ti-close:hover {
+    opacity: 1;
+}
+i.ti-close {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.7;
+}
 
   
 @keyframes keyFrame_shadow_in {

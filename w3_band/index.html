@@ -77,32 +77,32 @@
                         <li>November <span class="quantity">3</span></li>
                     </ul>
                     <!-- Places -->
-                    <div class="places-list">
-                        <div class="place-item">
+                    <div class="row places-list">
+                        <div class="col col-third">
                             <img src="./assets/img/newyork.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Pradasd faw gasd gdgdrfsda dasd asde ersdfas r</p>
-                                <a href="#" class="place-buy-btn">Buy Ticket</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Ticket</button>
                             </div>                          
                         </div>
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/img/paris.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Pradasd faw gasd gdgdrf dasd ffa fasfe ersdfas r</p>
-                                <a href="#" class="place-buy-btn">Buy Ticket</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Ticket</button>
                             </div>                          
                         </div>
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/img/sanfran.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Pradasd faw gasd gdgdrfe ersdfas r</p>
-                                <a href="#" class="place-buy-btn">Buy Ticket</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Ticket</button>
                             </div>                          
                         </div>
                     </div>                
@@ -113,11 +113,183 @@
             <div class="contact-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-slogan">Fan? Drop a note!</p>
+
+                <div class="row contact-content">
+                    <div class="col col-half contact-info">
+                        <p><i class="ti-location-pin">Chicago, US</i></p>
+                        <p><i class="ti-mobile">Phone: +94 75757575</i></p>
+                        <p><i class="ti-email">dev.911zz@gmail.com</i></p>
+                    </div>
+                    <div class="col col-half contact-form">
+                        <form action="">
+                            <div class="row">
+                                <div class="col col-half">
+                                    <input type="text" name="" placeholder="Name" required id="" class="form-control">
+                                </div>
+                                <div class="col col-half">
+                                    <input type="email" name="" placeholder="Email" required id="" class="form-control">
+                                </div>
+                                <!-- <div class="clear"></div> -->
+                            </div>
+
+                            <div class="row mt-8">
+                                <div class="col col-full">
+                                    <input type="text" name="" placeholder="Message" required id="" class="form-control">
+                                </div>
+                            </div>
+                           
+                            <input class="form-submit-btn mt-16" type="submit" value="SEND">
+                        
+                        </form>
+                    </div>
+                </div>             
             </div>   
         </div>         
         <div id="footer">
 
         </div>
     </div>
+    
+    <!-- Modal: Buy -->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="">
+                <i class="ti-close js-modal-close"></i>
+            </div>
+            
+            <header class="modal-header">
+                <i class="m-h-icon ti-bag"></i>
+                Tickets
+            </header>
+            <form action="" class="js-form1">
+                <div class="modal-body">
+                    <label for="ticket-quantity" class="modal-lable">
+                        <i class="ti-shopping-cart"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many??" required>
+    
+                    <label for="ticket-email" class="modal-lable">
+                        <i class="ti-user"></i>
+                        Send to
+                    </label>
+                    <input id="ticket-email" type="ticket-email" class="modal-input" placeholder="Enter your mail here" required>
+                    <button class="buy-ticket js-modal-buy-btn">
+                        Pay <i class="ti-check"></i>
+                    </button>
+                </div>
+                
+            </form>
+            <footer class="modal-footer">
+                <p class="modal-help"><a href="http://www.google.com">Need help?</a> </p>
+            </footer>
+        </div>
+    </div>
+    <!-- Modal Succeeded -->
+    <div class="modal-done js-modal-done">
+        <div class="modal-done-container js-modal-done-container">
+            <div class="modal-heading-section">
+                <i class="ti-check check-ico"></i>
+            </div>
+
+            <div class="done-text">
+                Đơn hàng của bạn đã được gửi!          
+            </div>
+            
+            <div class="done-close">
+                <button class="done-close-btn js-close-btn">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var inputs = document.getElementsByClassName("modal-input");
+
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalForm = document.querySelector('.js-form1')
+        const modalClose = document.querySelector('.js-modal-close')
+        const modalContainer = document.querySelector('.js-modal-container')
+
+        const modalInput = document.querySelector('.modal-input')
+        const modalDoneContainer = document.querySelector('.js-modal-done-container')
+        const modalBuyBtn = document.querySelector('.js-modal-buy-btn')
+        const modalDone = document.querySelector('.js-modal-done')
+        const modalDoneClose = document.querySelector('.js-close-btn')
+        // Show modal
+        function showBuyTickets()
+        {
+            modal.classList.add('open')
+        }
+        // Hide modal
+        function hideBuyTickets()
+        {
+            modal.classList.remove('open')
+        }
+        // Show SucceededModal
+        function showComplete()
+        {
+            //hideBuyTickets()
+            modalDone.classList.add('open')
+        }
+        // Hide SucceededModal
+        function hideComplete()
+        {
+            modalDone.classList.remove('open')
+            modal.classList.remove('open')
+        }
+
+
+        // Lặp qua từng thẻ btn và nghe hành vi click
+        for(const buyBtn of buyBtns)
+        {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+        
+        function isEmpty(str)
+        {
+            return !str.trim().length;
+        }
+
+        
+        // Ngăn không cho người dùng bấm nút mua khi chưa nhập đầy đủ thông tin
+        modal.addEventListener("submit", function(e){ // event into anonymous function
+            let ver = true;
+            e.preventDefault(); //Prevent submit event from refreshing the page
+
+            for(let i = 0; i < inputs.length; i++)
+            if(inputs[i].value == "")
+            {
+                // alert("empty");
+                ver = false;
+            }
+          
+            if(!ver){
+                return false;
+             }else{
+                // alert("Ok!");
+                showComplete();
+             } 
+        })
+        // Nghe hành vi click vào btn close
+        modalClose.addEventListener('click', hideBuyTickets)
+        modal.addEventListener('click', hideBuyTickets)
+        
+        // Nghe hành vi click vào Close Btn của DoneModal
+        modalDoneClose.addEventListener('click', hideComplete)
+
+        // Viết truyền thẳng hàm vào luôn
+        modalContainer.addEventListener('click', function (event) {
+            event.stopImmediatePropagation() //Chống nổi bọt ( để ngăn chặn việc bấm vào các thành phần con thì bị thoát)
+        })
+        modalDoneContainer.addEventListener('click', function (event) {
+            event.stopImmediatePropagation()
+        })
+
+
+    </script>
 </body>
 </html>

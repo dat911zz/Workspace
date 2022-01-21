@@ -91,12 +91,13 @@ html{
     top: 0;
     left: 0;
     right: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     animation: keyFrame_shadow_in 5s infinite;
 }
 
 #nav{
     display: inline-block;
+    /* position: inherit; */
 }
 
 #nav, .subnav{
@@ -126,7 +127,7 @@ html{
 }
 
 #nav li:hover .subnav{
-    display: block;
+    display: block !important;
 }
 
 #nav .subnav li:hover a,

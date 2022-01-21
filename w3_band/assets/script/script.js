@@ -79,6 +79,9 @@ modalDoneContainer.addEventListener('click', function(event) {
 
 // ====================================================
 // Responsive
+
+
+// Đóng/mở mobile menu
 mobileMenu.onclick = function(){
     // alert("Damn boiz!");
     console.log(header.clientHeight);
@@ -90,4 +93,14 @@ mobileMenu.onclick = function(){
     else{
         header.style.height = '46px';
     }
+}
+
+// Tự động đóng khi chọn menu
+var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+console.log(menuItems);
+
+
+for(var i = 0; i < menuItems.length; i++){
+    var menuItem = menuItems[i];
+    console.log(menuItem);
 }

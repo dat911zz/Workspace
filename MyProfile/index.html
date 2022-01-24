@@ -4,15 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/Style/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> 
     <title>My Blog</title>
 </head>
 <body>
-    <div class="main">
-        <div class="header"></div>
-        <div class="nav"></div>
-        <div class="container"></div>
-        <div class="footer"></div>
+    <div id="main">
+        <div id="header">
+            <!-- Begin: nav -->
+            <ul id="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li>
+                    <a href="#">
+                    More
+                    <i class="uil uil-angle-down nav-arrow-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li>Coming Soon</li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- End: nav -->
+        </div>       
+        <div id="slider">
+            <div class="text-content">
+                <h2 class="text-heading">Vũ Ngô Đạt</h2>
+                <div class="text-description">Developer</div>
+            </div>
+        </div>
+        <div id="content"></div>
+        <div id="footer"></div>
     </div>
 </body>
 </html>

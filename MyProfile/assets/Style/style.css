@@ -1,0 +1,134 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth !important;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+/* Common */
+.clear{
+    clear: both;
+}
+.text-white{
+    color: #fff !important;
+}
+.text-center{
+    text-align: center !important;
+}
+
+/* CSS */
+#main{
+
+}
+
+#header{
+    background: linear-gradient(to bottom, #344CC7 0%, #FF59D8 100%);
+    background: -moz-linear-gradient(to bottom, #344CC7 0%, #FF59D8 100%);
+    background: -o-linear-gradient(to bottom, #344CC7 0%, #FF59D8 100%);
+    background: -ms-linear-gradient(to bottom, #344CC7 0%, #FF59D8 100%);
+    background: -webkit-linear-gradient(top, #344CC7 0%, #FF59D8 100%);
+    height: 46px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: keyFrame_shadow_in 5s infinite;
+}
+#nav{
+    display: inline-block;
+}
+#nav, .subnav{
+    list-style-type: none;
+}
+#nav > li{
+    display: inline-block;
+}
+#nav li{
+    position: relative;
+}
+#nav > li > a{
+    color: #fff;
+    display: inline;
+    text-transform: uppercase;
+}
+#nav li a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+}
+#nav li:hover .subnav{
+    display: block !important;
+}
+#nav .subnav li:hover a,
+#nav > li:hover > a{
+    color: #000;
+    background-color: #ccc;
+    display: block;
+}
+#nav .subnav{
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 8px #888888;
+}
+#nav .subnav a{
+    padding: 0 12px;
+    color:#000;
+    line-height: 46px;
+}
+#nav .nav-arrow-down{
+    font-size: 18px;
+}
+
+
+
+#slider{
+    position: relative;
+    background: url("../Img/Jhin.jpg") top center / cover no-repeat;
+    max-height: 300px;
+    margin-top: 46px;
+    padding-top: 50%;
+}
+#slider .text-content{
+    position: absolute;
+    bottom: 50%;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 26px;
+}
+#slider .text-description{
+    font-size: 14px;
+    margin-top: 13px;
+    font-style: italic;
+}
+
+/* Key frames for animation */
+@keyframes keyFrame_shadow_in {
+    0% {box-shadow: 0 -10px 40px rgb(206, 34, 221) inset;}
+    10% {box-shadow: 0 -10px 40px rgb(193, 55, 206) inset;}
+    30% {box-shadow: 0 -10px 30px rgb(234, 1, 255) inset;}
+    50% {box-shadow: 0 -10px 20px rgb(162, 13, 175) inset;}
+    70% {box-shadow: 0 -10px 30px rgb(206, 34, 221) inset;}
+    100% {box-shadow: 0 -10px 40px rgb(206, 34, 221) inset;}
+}
+@keyframes keyFrame_shadow_out {
+    0% {box-shadow: 0 -10px 40px rgb(206, 34, 221) ;}
+    10% {box-shadow: 0 -10px 40px rgb(193, 55, 206) ;}
+    30% {box-shadow: 0 -10px 30px rgb(234, 1, 255) ;}
+    50% {box-shadow: 0 -10px 20px rgb(162, 13, 175) ;}
+    70% {box-shadow: 0 -10px 30px rgb(206, 34, 221) ;}
+    100% {box-shadow: 0 -10px 40px rgb(206, 34, 221) ;}
+}

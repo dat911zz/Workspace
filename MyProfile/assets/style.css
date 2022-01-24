@@ -91,6 +91,6 @@ html{
 
 
 .content{
-    background-color: #000;
-    min-height: 500px;
+    background: url("./Img/Pantheon.png") top center / no-repeat;
+    
 }

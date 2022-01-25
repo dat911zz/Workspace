@@ -91,7 +91,7 @@ html{
     top: 0;
     left: 0;
     right: 0;
-    /* overflow: hidden; */
+    overflow: hidden;
     animation: keyFrame_shadow_in 5s infinite;
 }
 
@@ -154,6 +154,13 @@ html{
 
 #nav .nav-arrow-down{
     font-size: 10px;
+}
+
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
 }
 
 #header .mobile-menu-btn,

@@ -91,7 +91,7 @@ mobileMenu.onclick = function(){
         header.style.height = 'auto';
     }
     else{
-        header.style.height = '46px';
+        header.style.height = null;
     }
 }
 
@@ -102,5 +102,10 @@ console.log(menuItems);
 
 for(var i = 0; i < menuItems.length; i++){
     var menuItem = menuItems[i];
-    console.log(menuItem);
+    // console.log(menuItem);
+
+    menuItem.onclick = function () {
+        console.log(this);
+        header.style.height = null;
+    }
 }

@@ -97,6 +97,7 @@ html{
 
 #nav{
     display: inline-block;
+    /* position: inherit; */
 }
 
 #nav, .subnav{
@@ -126,7 +127,7 @@ html{
 }
 
 #nav li:hover .subnav{
-    display: block;
+    display: block !important;
 }
 
 #nav .subnav li:hover a,
@@ -153,6 +154,13 @@ html{
 
 #nav .nav-arrow-down{
     font-size: 10px;
+}
+
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
 }
 
 #header .mobile-menu-btn,

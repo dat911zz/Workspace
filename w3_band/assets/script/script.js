@@ -33,7 +33,6 @@ function hideComplete() {
     modal.classList.remove('open')
 }
 
-
 // Lặp qua từng thẻ btn và nghe hành vi click
 for (const buyBtn of buyBtns) {
     buyBtn.addEventListener('click', showBuyTickets)

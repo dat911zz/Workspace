@@ -97,7 +97,6 @@ html{
 
 #nav{
     display: inline-block;
-    /* position: inherit; */
 }
 
 #nav, .subnav{
@@ -116,7 +115,7 @@ html{
     color: #fff;
     display: inline;
     text-transform: uppercase;
-    
+
 }
 
 #nav li a{

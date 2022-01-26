@@ -7,7 +7,10 @@
 
 html{
     scroll-behavior: smooth !important;
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
 }
 /* 
 1. Từ ngoài vào trong
@@ -91,12 +94,13 @@ html{
     top: 0;
     left: 0;
     right: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     animation: keyFrame_shadow_in 5s infinite;
 }
 
 #nav{
     display: inline-block;
+    /* position: inherit; */
 }
 
 #nav, .subnav{
@@ -115,7 +119,6 @@ html{
     color: #fff;
     display: inline;
     text-transform: uppercase;
-
 }
 
 #nav li a{
@@ -262,7 +265,8 @@ html{
 }
 #content .member-img{
     margin-top:  15px;
-    width: 153.5px;
+    /* width: 153.5px; */
+    width: 60%;
     image-rendering: auto;
     border-radius: 4px;
 }
@@ -302,7 +306,7 @@ html{
 }
 /* Places */
 .places-list{
-    margin-top: 32px;
+    margin-top: 16px;
     margin-bottom: 48px;
 }
 .place-img{

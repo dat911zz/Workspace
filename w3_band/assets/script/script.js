@@ -1,6 +1,6 @@
 var inputs = document.getElementsByClassName("modal-input");
 var header = document.getElementById('header');
-var mobileMenu = document.getElementById('mobile-menu');
+var mobileMenu = document.getElementById('mobile-menu'); 
 
 const buyBtns = document.querySelectorAll('.js-buy-ticket')
 const modal = document.querySelector('.js-modal')
@@ -33,6 +33,7 @@ function hideComplete() {
     modal.classList.remove('open')
 }
 
+
 // Lặp qua từng thẻ btn và nghe hành vi click
 for (const buyBtn of buyBtns) {
     buyBtn.addEventListener('click', showBuyTickets)
@@ -41,8 +42,6 @@ for (const buyBtn of buyBtns) {
 function isEmpty(str) {
     return !str.trim().length;
 }
-
-
 // Ngăn không cho người dùng bấm nút mua khi chưa nhập đầy đủ thông tin
 modal.addEventListener("submit", function(e) { // event into anonymous function
     let ver = true;
@@ -101,10 +100,17 @@ console.log(menuItems);
 
 for(var i = 0; i < menuItems.length; i++){
     var menuItem = menuItems[i];
-    // console.log(menuItem);
+    
+    console.log(menuItem.nextElementSibling);
 
     menuItem.onclick = function () {
-        console.log(this);
-        header.style.height = null;
+        // console.log(this);
+        var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+        if(!isParentMenu){
+            header.style.height = null;
+        } else {
+            event.preventDefault();
+        }
+        // header.style.height = null;
     }
 }

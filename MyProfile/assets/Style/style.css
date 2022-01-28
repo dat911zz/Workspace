@@ -108,11 +108,13 @@ html{
     color: rgb(215, 255, 224);
     width: 100%;
     text-align: center;
+    letter-spacing: 2px;
 }
 #slider .text-heading{
     font-weight: 500;
     font-size: 28px;
     color: #ffffcc;
+    letter-spacing: 3px;
     text-shadow: 0 0 5px #fff,
                  0 0 10px #fff, 
                  0 0 20px rgb(0, 240, 0), 
@@ -144,6 +146,15 @@ html{
 
 #footer{
     position: relative;
+    color: #fff;
+    text-shadow: 0 0 5px #fff,
+                 0 0 10px #fff, 
+                 0 0 20px rgb(0, 240, 0), 
+                 0 0 30px rgb(2, 240, 2), 
+                 0 0 40px rgb(9, 223, 9), 
+                 0 0 55px rgb(0, 241, 0), 
+                 0 0 70px green;
+    background-color: #000;
 }
 
 
@@ -193,6 +204,37 @@ html{
 	-webkit-animation: scale-up-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: scale-up-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
+.skill-card{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    background-color: #ddd;
+}
+.block-section{
+    width: 100%;
+    
+}
+.skills {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+}
+  
+  .html {width: 90%; background-color: #04AA6D;}
+  .css {width: 80%; background-color: #2196F3;}
+  .js {width: 65%; background-color: #f44336;}
+  .php {width: 60%; background-color: #808080;}
+
+
+
 /* Key frames for animation */
 @keyframes keyFrame_shadow_in {
     0% {box-shadow: 0 -10px 40px rgb(206, 34, 221) inset;}

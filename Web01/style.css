@@ -79,6 +79,7 @@
 .a{
   color: red;
   font-size: 255%;
+  font-weight: 500;
 } 
 p:hover{
   color:rgb(122, 26, 167);

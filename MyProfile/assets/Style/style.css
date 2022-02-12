@@ -95,7 +95,8 @@ html{
 
 #slider{
     position: relative;
-    background: url("../Img/Jhin.jpg") top center / cover no-repeat;
+    /* background: url("../Img/Jhin.jpg") top center / cover no-repeat; */
+    background-color: #000;
     opacity: 0.9;
     max-height: 300px;
     margin-top: 46px;
@@ -130,6 +131,14 @@ html{
     font-style: italic;
 }
 
+#myVideo {
+    position: absolute;
+    opacity: 0.9;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    /* height: 100vh; */
+}
 
 #content{
     position: relative;

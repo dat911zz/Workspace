@@ -7,7 +7,7 @@
 
 html{
     scroll-behavior: smooth !important;
-    font-family: 'Lora', serif;
+    font-family: 'Lora', serif !important;
 }
 
 /* Common */
@@ -97,8 +97,7 @@ html{
     position: relative;
     /* background: url("../Img/Jhin.jpg") top center / cover no-repeat; */
     background-color: #000;
-    opacity: 0.9;
-    max-height: 300px;
+    max-height: 100vh;
     margin-top: 46px;
     padding-top: 50%;
     image-rendering: auto;
@@ -112,10 +111,10 @@ html{
     letter-spacing: 2px;
 }
 #slider .text-heading{
-    font-weight: 500;
-    font-size: 28px;
+    font-weight: 600;
+    font-size: 30px;
     color: #ffffcc;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     text-shadow: 0 0 5px #fff,
                  0 0 10px #fff, 
                  0 0 20px rgb(0, 240, 0), 
@@ -126,14 +125,16 @@ html{
     
 }
 #slider .text-description{
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 13px;
+    letter-spacing: 3px;
+    font-weight: 500;
     font-style: italic;
 }
 
 #myVideo {
     position: absolute;
-    opacity: 0.9;
+    opacity: 0.8;
     right: 0;
     bottom: 0;
     width: 100vw;
@@ -168,6 +169,12 @@ html{
 
 
 /* Decoration */
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+}
 .spacer{
     aspect-ratio: 960/540;
     width: 100%;
@@ -178,7 +185,7 @@ html{
     opacity: 0.9;
 }
 .layer1{
-    /* background-image: url('./layered-waves-haikei.svg'); */
+    background-image: url('./layered-waves-haikei.svg');
     background-color: #4158D0;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #fad083 100%);
 }
@@ -202,17 +209,17 @@ html{
     height: 164px;
 }
 
-.custom-shape-divider-bottom-1643086459 .shape-fill {
+/* .custom-shape-divider-bottom-1643086459 .shape-fill {
     
     
     fill: #d646b5;
     fill: #457ee7;
     
-}
-.scale-up-center {
+} */
+/* .scale-up-center {
 	-webkit-animation: scale-up-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: scale-up-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
+} */
 
 .skill-card{
     padding: 10px;
@@ -280,4 +287,13 @@ html{
       -webkit-transform: scale(1);
               transform: scale(1);
     }
-  }
+}
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px rgb(18, 252, 30), 0 0 30px rgb(11, 184, 11), 0 0 40px rgb(11, 184, 11), 0 0 50px rgb(11, 184, 11), 0 0 60px rgb(11, 184, 11), 0 0 70px rgb(11, 184, 11);
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px rgb(0, 255, 0), 0 0 40px rgb(0, 241, 0), 0 0 50px rgb(0, 241, 0), 0 0 60px rgb(0, 241, 0), 0 0 70px rgb(0, 241, 0), 0 0 80px rgb(0, 241, 0);
+    }
+}

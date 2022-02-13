@@ -1,11 +1,3 @@
-var i = 0;
-var txt = 'Lorem ipsum dummy text blabla.';
-var speed = 50;
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
+const primaryNav = document.getElementById("header");
+console.log(primaryNav);
+primaryNav.innerHTML = '\n<\!-- Begin: nav -->\n<ul id="nav">\n<li><a href="/MyProfile/index.html">Home</a></li>\n<li><a href="/MyProfile/ChildPage/about.html">About</a></li>\n<li><a href="/MyProfile/ChildPage/contact.html">Contact</a></li>\n<li>\n<a href="#">\nMore\n<i class="uil uil-angle-down nav-arrow-down"></i>\n</a>\n<ul class="subnav">\n<li><a href="">Coming Soon</a></li>\n</ul>\n</li>\n</ul>\n<\!-- End: nav -->\n<div class="clear"></div>\n';

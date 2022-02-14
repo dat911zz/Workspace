@@ -98,6 +98,7 @@ html{
     /* background: url("../Img/Jhin.jpg") top center / cover no-repeat; */
     background-color: #000;
     max-height: 100vh;
+    max-width: 100%;
     margin-top: 46px;
     padding-top: 50%;
     image-rendering: auto;
@@ -156,6 +157,7 @@ html{
 
 #footer{
     position: relative;
+    min-height: 200px;
     color: #fff;
     text-shadow: 0 0 5px #fff,
                  0 0 10px #fff, 
@@ -164,7 +166,7 @@ html{
                  0 0 40px rgb(9, 223, 9), 
                  0 0 55px rgb(0, 241, 0), 
                  0 0 70px green;
-    background-color: #000;
+    background-color: #fff;
 }
 
 

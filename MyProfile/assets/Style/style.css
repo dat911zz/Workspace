@@ -157,7 +157,7 @@ html{
 
 #footer{
     position: relative;
-    min-height: 200px;
+    min-height: 100px;
     color: #fff;
     text-shadow: 0 0 5px #fff,
                  0 0 10px #fff, 
@@ -168,6 +168,13 @@ html{
                  0 0 70px green;
     /* background-color: #fff; */
 }
+
+#Contact{
+    background-image: url('../Img/Contact.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
 
 
 /* Decoration */

@@ -170,11 +170,15 @@ html{
 }
 
 #Contact{
+    display: flex;
+    justify-content: center;
     background-image: url('../Img/Contact.jpg');
     background-repeat: no-repeat;
     background-size: 100vw;
 }
-
+#Contact .btn-primary{
+    text-decoration: none;
+}
 
 
 /* Decoration */

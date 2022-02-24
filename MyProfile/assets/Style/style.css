@@ -21,6 +21,11 @@ html{
     text-align: center !important;
 }
 
+body {
+    /* height: 100vh; */
+    background-color: #000;
+    /* background-color: #050514; */
+}
 /* CSS */
 #main{
 
@@ -96,7 +101,6 @@ html{
 #slider{
     position: relative;
     /* background: url("../Img/Jhin.jpg") top center / cover no-repeat; */
-    background-color: #000;
     max-height: 100vh;
     max-width: 100%;
     margin-top: 46px;
@@ -142,22 +146,14 @@ html{
     /* height: 100vh; */
 }
 
-#content{
-    position: relative;
-    color: rgb(138, 235, 125);
-    /* background-color: #d646b5; */
-}
-#content .content-section .header{
-    font-size: 28px;
-    font-weight: 500;
-    padding: 46px;
-    line-height: 50px;
-}
-
-
 #footer{
-    position: relative;
-    min-height: 100px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    min-height: 2rem;
+    width: 100vw;
     color: #fff;
     text-shadow: 0 0 5px #fff,
                  0 0 10px #fff, 
@@ -166,7 +162,7 @@ html{
                  0 0 40px rgb(9, 223, 9), 
                  0 0 55px rgb(0, 241, 0), 
                  0 0 70px green;
-    /* background-color: #fff; */
+    background-color: rgba(255, 255, 255, 0.308);
 }
 
 #Contact{
@@ -197,71 +193,6 @@ html{
     background-size: cover;
     opacity: 0.9;
 }
-.layer1{
-    background-image: url('./layered-waves-haikei.svg');
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #fad083 100%);
-}
-
-
-.custom-shape-divider-bottom-1643086459 {
-    position: absolute;
-    /* bottom: 0; */
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    /* transform: rotate(180deg); */
-}
-
-.custom-shape-divider-bottom-1643086459 svg {
-    position: relative;
-    display: block;
-    width: calc(123% + 1.3px);
-    height: 164px;
-}
-
-/* .custom-shape-divider-bottom-1643086459 .shape-fill {
-    
-    
-    fill: #d646b5;
-    fill: #457ee7;
-    
-} */
-/* .scale-up-center {
-	-webkit-animation: scale-up-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-} */
-
-.skill-card{
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    align-items: center;
-}
-
-.container {
-    width: 100%;
-    background-color: #ddd;
-}
-.block-section{
-    width: 100%;
-    
-}
-.skills {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: #fff;
-}
-  
-  .html {width: 90%; background-color: #04AA6D;}
-  .css {width: 80%; background-color: #2196F3;}
-  .js {width: 65%; background-color: #f44336;}
-  .php {width: 60%; background-color: #808080;}
-
 
 
 /* Key frames for animation */

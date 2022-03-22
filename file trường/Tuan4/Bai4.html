@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 50px;
+            width: -webkit-fill-available;
+        }
+        .btn{
+            width: 100px; 
+            border-radius: 10px;
+            opacity: 0.8;
+        }
+        .btn:hover{
+            opacity: 1;
+            background-color: aquamarine;
+        }
+        tr{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <table style="width: 700px;" border="1" align="center">
+        <tr>
+            <td colspan="2" align="center" bgcolor="00FFFF"><h2>THÊM SINH VIÊN</h2></td>
+        </tr>
+        <tr>
+            <td>Mã sinh viên</td>
+            <td><input type="text" name="txt_MSV"></td>
+        </tr>
+        <tr>
+            <td>Họ tên</td>
+            <td><input type="text" name="txt_TenSV"></td>
+        </tr>
+        <tr>
+            <td>Ngày sinh</td>
+            <td><input type="date" name="txt_NS"></td>
+        </tr>
+        <tr>
+            <td>Hình</td>
+            <td><input type="file" name="txt_Hinh"></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <input class="btn" type="button" value="    ADD   " name="btn_Add">
+                <input class="btn" type="button" value="    UPDATE  " name="btn_Update">
+                <input class="btn" type="button" value="    SAVE    " name="btn_Save">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

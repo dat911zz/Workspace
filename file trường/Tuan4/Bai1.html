@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .formInput{
+            border: #777 solid 1px;
+            margin: 0 auto;
+            border-radius: 5px;
+            width: 55%;
+        }
+        input{
+            margin-left: 20px;
+            width: 612px;
+            height: 50px;
+        }
+        h3{
+            text-align: center;
+            color: red;
+        }
+        .btn{
+            color: darkred; 
+            background-color: #999; 
+            margin: 20px; 
+            font-weight: 600; 
+            opacity: 0.8;
+            font-size: medium;
+            border-radius: 15px;
+            width: 50%;
+        }
+        .btn:hover{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <form name="F1" method="get" class="formInput">
+        <table cellspacing="10px" style="margin: 0 auto;">
+            <tr bgcolor="#CCCCCC">
+                <td colspan="2"><h3 style="margin-left: 20px;">THÔNG TIN NGƯỜI GỬI</h3></td>
+            </tr>
+            <tr>
+                <td>* Người gửi</td>
+                <td><input type="text" placeholder="Nhập họ và tên" size="60"></td>
+            </tr>
+            <tr>
+                <td>* Email</td>
+                <td><input type="text" placeholder="Nhập Email" size="60"></td>
+            </tr>
+            <tr>
+                <td>* Điện thoại</td>
+                <td><input type="number" placeholder="Nhập SĐT" size="60"></td>
+            </tr>
+        </table>
+    </form>
+    <form name="F2" method="get" class="formInput">
+        <table cellspacing="10px" style="margin: 0 auto;">
+            <tr bgcolor="#CCCCCC">
+                <td colspan="2"><h3 style="margin-left: 20px;">THÔNG TIN NGƯỜI NHẬN</h3></td>                   
+            </tr>
+            <tr>
+                <td>* Người nhận</td>
+                <td><input name="Recive" type="text" placeholder="Nhập họ và tên" size="50"></td>
+            </tr>
+            <tr>
+                <td>* Điện thoại</td>
+                <td><input name="PhoneNum" type="number" placeholder="Nhập điện thoại" size="50"></td>
+            </tr>
+            <tr>
+                <td>* Địa chỉ</td>
+                <td><input name="Address" type="text" placeholder="Nhập địa chỉ" size="50"></td>
+            </tr>
+            <tr>
+                <td>* Tỉnh/TP</td>
+                <td>
+                    <select name="Provine" style="margin-left: 20px; width: 620px; height: 50px;">
+                        <option value="1">TP.HCM (NỘI THÀNH)</option>
+                        <option value="2">Hà Nội</option>
+                        <option value="3">Huế</option>
+                        <option value="4">Đà Nẵng</option>
+                        <option value="5">Quảng Ninh</option>
+                        <option value="6">Cần Thơ</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>* Quận</td>
+                <td>
+                    <select name="District" style="margin-left: 20px; width: 620px; height: 50px;">
+                        <option value="1">Quận 1</option>
+                        <option value="2">Quận 2</option>
+                        <option value="3">Quận 3</option>
+                        <option value="4">Quận Tân Bình</option>
+                        <option value="5">Quận Tân Phú</option>
+                        <option value="6">Quận Thủ Đức</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <center>
+            <input type="submit" value="GỬI" class="btn">
+        </center>
+    </form>
+</body>
+</html>

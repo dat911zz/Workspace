@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section{
+            border-bottom: #777 solid;
+        }
+        .formInput{
+            border: #777 solid 1px;
+            margin: 0 auto;
+            border-radius: 5px;
+            width: 55%;
+        }
+        
+    </style>
+</head>
+<body>
+    <form name="F1" method="get" class="formInput">
+        <table cellspacing="10px" style="width: 100%;">
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="username" placeholder="Input a name"></td>           
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="pass" placeholder="Input a password"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="ĐĂNG NHẬP" class="btn"></td> 
+            </tr>     
+            <tr>
+                <td colspan="2">                   
+                    <hr style="color: red;">
+                </td>
+            </tr>       
+            <tr valign="top">
+                <td>Hobby</td>
+                <td>
+                    <input type="checkbox" name="Hobby" value="Music">Music<br>
+                    <input type="checkbox" name="Hobby" value="Film">  Film<br>
+                    <input type="checkbox" name="Hobby" value="Sport">Sport<br>
+                </td>              
+            </tr>
+            <tr>
+                <td colspan="2">                   
+                    <hr>
+                </td>
+            </tr>       
+            <tr valign="top">
+                <td>User for</td>
+                <td>
+                    <input type="radio" name="User_for" value="home">Home<br>
+                    <input type="radio" name="User_for" value="business">Business<br>
+                    <input type="radio" name="User_for" value="gov">Goverment<br>
+                    <input type="radio" name="User_for" value="EI">Education Institution<br>
+                    <input type="radio" name="User_for" value="other">Other<br>
+                </td>               
+            </tr>
+            <tr>
+                <td colspan="2">                   
+                    <hr>
+                </td>
+            </tr>  
+            <tr>
+                <td><button>Chuỗi reset</button></td>                
+            </tr>   
+            <tr>
+                <td colspan="2">                   
+                    <hr>
+                </td>
+            </tr>       
+            <tr>
+                <td><button>OK</button></td>        
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

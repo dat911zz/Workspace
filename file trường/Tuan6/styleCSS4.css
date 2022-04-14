@@ -1,0 +1,14 @@
+#container{
+    width: 960px;
+    height: 600px;
+    border: 1px solid black;
+    margin: auto;
+}
+#top{
+    height: 30%;
+    background-color: green;
+}
+#bot{
+    height: 70%;
+    background-color: blue;
+}

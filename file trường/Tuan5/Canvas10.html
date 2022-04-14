@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas10</title>
+</head>
+<body>
+    <center>
+        <canvas id="myCanvas" width="400" height="220" style="border: 1px solid #000; border-radius: 15px; background-color: rgba(127, 255, 212, 0.644);"></canvas>
+    </center>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        
+        function DrawCircle(Context, x, y, radius, startAg, endAg, color)
+        {
+            Context.lineWidth = 10;
+            Context.beginPath();
+            Context.strokeStyle = color;
+            Context.arc(x, y, radius, startAg, endAg);
+            Context.stroke();
+        }
+        function DrawLine(Context, x1, y1, x2, y2, color)
+        {
+            Context.beginPath();
+            Context.strokeStyle = color;
+            Context.moveTo(x1, y1);
+            Context.lineTo(x2, y2);
+            Context.stroke();
+        }
+        var delayInMilliseconds = 5000; //1 second
+
+        
+        var i = 70;
+        
+        //Draw radial
+        setTimeout(function() {
+            DrawCircle(ctx, 200, 100, 70, 0 , 2 * Math.PI, "gold");
+            DrawCircle(ctx, 200, 100, 90, Math.PI , 4 * Math.PI / 3, "gold");
+            DrawCircle(ctx, 200, 100, 110, Math.PI , 4 * Math.PI / 3, "gold");
+            while (i <= 150)
+            {
+              DrawCircle(ctx, 200, 100, i+=20, -Math.PI/3 , 0, "grey");
+            }     
+        }, 0);
+        setTimeout(function() {
+            DrawCircle(ctx, 200, 100, 70, 0 , 2 * Math.PI, "blue");
+            DrawCircle(ctx, 200, 100, 90, Math.PI , 4 * Math.PI / 3, "blue");
+            DrawCircle(ctx, 200, 100, 110, Math.PI , 4 * Math.PI / 3, "blue");
+            while (i <= 150)
+            {
+              DrawCircle(ctx, 200, 100, i+=20, -Math.PI/3 , 0, "grey");
+            }     
+        }, 3000);
+        
+        //Draw line
+        setTimeout(function() {
+            DrawLine(ctx, 150, 50, 250, 50, "yellow");
+        }, 100);
+        setTimeout(function() {
+            DrawLine(ctx, 140, 70, 260, 70, "red");
+        }, 300);
+        setTimeout(function() {
+            DrawLine(ctx, 130, 90, 270, 90, "green");
+        }, 500);
+        setTimeout(function() {
+            DrawLine(ctx, 130, 110, 270, 110, "violet");
+        }, 700);
+        setTimeout(function() {
+            DrawLine(ctx, 140, 130, 260, 130, "aqua");
+        }, 900);
+        setTimeout(function() {
+            DrawLine(ctx, 150, 150, 250, 150, "gold");
+        }, 1100);
+        setTimeout(function() {
+            DrawLine(ctx, 200, 30, 200, 170, "grey");
+        }, 1300);
+
+        setTimeout(function() {
+            DrawLine(ctx, 150, 50, 250, 50, "Blue");
+
+            DrawLine(ctx, 140, 70, 260, 70, "Blue");
+
+            DrawLine(ctx, 130, 90, 270, 90, "Blue");
+
+            DrawLine(ctx, 130, 110, 270, 110, "Blue");
+
+            DrawLine(ctx, 140, 130, 260, 130, "Blue");
+
+            DrawLine(ctx, 150, 150, 250, 150, "Blue");
+
+            DrawLine(ctx, 200, 30, 200, 170, "Blue");
+        }, 2000);
+        
+
+        
+        //Draw text
+        ctx.font = "25px Arial";
+        ctx.fillText("GLOBAL 2021", 125, 205);
+
+        
+    </script>
+</body>
+</html>

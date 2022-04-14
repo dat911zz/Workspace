@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 30px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+            background-color: rgba(0, 128, 0, 0.89);
+            transition: width 5s, height 5s, font-size 5s, background-color 5s, color 5s;
+        }
+        .box:hover{
+            width: 90vw;
+            height: 90vh;
+            font-size: 50vh;
+            color: yellow;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>CSS</p>
+    </div>
+</body>
+</html>

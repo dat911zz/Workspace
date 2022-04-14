@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas8</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200" style="border: 1px solid #F00;"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        //Create gradient
+        var grd = ctx.createRadialGradient(100 ,100 , 5 , 100 , 100 , 100);
+        //(x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): CanvasGradient
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+
+        //Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(1, 0, 200, 200);
+    </script>
+</body>
+</html>

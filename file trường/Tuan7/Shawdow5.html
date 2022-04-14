@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        .container{
+            width: 300px;
+            height: 100px;
+            background-color: aquamarine;
+            border: 1px solid black;
+            box-shadow: 0 0 16px gray;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin: 80px auto;
+        }
+        .container:hover{
+            box-shadow: 2px 2px 50px #0dff00, 0 0 10px #108700, 0 0 50px #0be600, 0 0 100px #0be600 , 0 0 150px #0be600, 0 0 200px #0be600;
+            transition: 1000ms;
+        }
+        .container:active{
+            box-shadow: 2px 2px 5px #fa4b00, 2px 2px 10px #ffa200, 2px 2px 50px #f6ff00, 2px 2px 80px #edff48;
+            transition: 500ms;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onclick="myClick()">
+        <p>
+            <h2 id="text1">
+                Hover over me or die!
+            </h2>
+        </p>
+    </div>
+</body>
+</html>
+<script>
+    function myClick(){
+        // alert("Bấm bấm cái đầu moi !");
+        document.getElementById("text1").innerHTML = "Don't click me!";
+    }
+</script>

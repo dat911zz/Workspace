@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipslay</title>
+    <style>
+        .flip, #panel{
+            font-size: 16px;
+            padding: 10px;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #a6d8a8;
+            margin: auto;
+        }
+        .flip:hover{
+            opacity: 0.7;
+
+        }
+        #panel{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="flip" onmousemove="myOpen()" onmouseout="myClose()">Click me to show panel</div>
+    <div id="panel">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, cumque in. Optio ullam non unde quo temporibus blanditiis expedita, possimus eum nesciunt aperiam fugiat vero, rerum magni tempore cum molestiae!
+            Perspiciatis quod nam eum ducimus. Incidunt alias, magnam eius tempore obcaecati, porro deleniti temporibus soluta vero suscipit similique facilis impedit fuga. Praesentium et cum dolore ipsum consequuntur similique deserunt iusto.
+            Quasi aliquam quas delectus dignissimos explicabo cum ipsam, dolores quae dolorum earum vel aperiam voluptate neque alias suscipit molestias aut nihil incidunt beatae aliquid eum? Deserunt recusandae at laboriosam tempore!
+            Molestiae, ducimus. Incidunt sunt dolorem necessitatibus praesentium, reprehenderit laborum debitis. Iusto temporibus corporis molestias atque sed, tenetur hic molestiae obcaecati maiores omnis itaque dolor voluptas dignissimos totam neque voluptatem voluptate?
+            Porro, cumque! Maxime quibusdam molestias, molestiae accusamus sit obcaecati nulla reprehenderit voluptates quae id eaque nobis esse, nesciunt explicabo mollitia rerum laborum maiores ipsam? Voluptatem repudiandae fugiat fuga facilis consequatur!
+        </p>
+    </div>
+</body>
+</html>
+<script>
+    function myOpen(){
+        document.getElementById("panel").style.display = "block";
+    }
+    function myClose(){
+        document.getElementById("panel").style.display = "none";
+    }
+</script>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }    
+        .sidebar{
+            background-color: #666;
+            width: 171px;
+            height: 100vh;
+            text-decoration: none;        
+        }
+        .sidebar ul li{
+            list-style: none;
+            display: block;
+            position: relative;
+            width: 150px;
+            line-height: 50px;
+            padding: 10px 0 10px 20px;
+            background-color: 1px solid #fff;         
+        }      
+        .sidebar ul li:hover{
+            background-color: #454545;
+            box-shadow: 0px 5px 5px #999; 
+            transform: scaleX(1.05) scaleY(1.05);          
+        }
+        .sidebar ul ul{
+            position: absolute;
+            top: 0px;
+            left: 171px;
+        }
+        .sidebar ul ul li{
+            width: 150px;
+            margin: 0 1px;
+        }
+        .sidebar ul ul li{
+            background-color: #808080;
+            /* padding: 0 10px; */
+            padding: 10px 0 10px 20px;
+        }
+        .sidebar ul ul, .sidebar ul ul ul{
+            visibility: hidden;
+        }
+        .sidebar ul li:hover > ul{
+            visibility: visible;
+        }
+    </style>
+</head>
+<body style="height: 500px;">
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#">Diễn đàn</a>
+                <ul>
+                    <li><a href="">Sinh viên HUFI</a></li>
+                    <li>
+                        <a href="">Sinh viên CNTT</a>
+                        <ul>
+                            <li><a href="">Khóa 09DHTH</a></li>
+                            <li><a href="">Khóa 10DHTH</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Hỏi đáp</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+</body>
+</html>

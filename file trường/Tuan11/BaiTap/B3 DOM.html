@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+        .container{
+            width: 80vw;
+            height: 370px;
+            background: aqua;
+            margin: 0 auto;
+        }
+        .pic{
+            float: left;
+            height: 100%;
+            width: 50%;
+        }
+        .content{
+            float: left;
+            height: 100%;
+            width: 50%;
+        }
+        .content::after{
+            clear: both;
+        }
+        #dd, #hh, #mm, #ss{
+            padding: 20px;
+        }
+        .heading{
+
+        }
+        .ct-1{
+
+        }
+        .ct-2{
+
+        }
+        .clock{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .card{
+            margin-top: 55px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            width: 90px;
+            height: 80px;
+            background-color: blue;
+            color: #fff;
+            text-align: center;
+        }
+        .end{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pic">
+            <img src="../Images/sale-off-khac-sale-up-to-1.jpg" alt="">
+        </div>
+        <div class="content">
+            <div class="heading">SALE UP TO 70% OFF</div>
+            <div class="ct-1">Kết thúc vào: Thứ ba, ngày 21 tháng 5 năm 2022 <br> 13:30am</div>
+            <div class="ct-2">Nhanh chân đến mua ngay chương trình sẽ kết thúc trong</div>
+            <div class="clock">
+                <div class="card">
+                    <P id="dd">days</P>
+                    <p>NGÀY</p>
+                </div>
+                <div class="card">
+                    <p id="hh">hours</p>
+                    <p>GIỜ</p>
+                </div>
+                <div class="card">
+                    <p id="mm">minutes</p>
+                    <p>PHÚT</p>
+                </div>
+                <div class="card">
+                    <div id="ss">seconds</div>
+                    <p>GIÂY</p>
+                </div>               
+            </div>
+            
+            <div style="clear: both;"></div>
+            <p class="end">Chương trình đã kết thúc</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        var fullTime = new Date("may 31, 2022 16:40:00").getTime();
+        setInterval(() => {
+            var now = new Date().getTime();
+            // now = new Date("may 31, 2022 16:40:00").getTime();
+            var duration = fullTime - now;
+
+            var days = Math.floor(duration/(1000*60*60*24));
+            var hours = Math.floor(duration/(1000*60*60));
+            var mins = Math.floor(duration/(1000*60));
+            var secs = Math.floor(duration/(1000));
+
+            hours %= 24;
+            mins %= 60;
+            secs %= 60;
+
+            document.getElementById("dd").innerHTML = days;
+            document.getElementById("hh").innerHTML = hours;
+            document.getElementById("mm").innerHTML = mins;
+            document.getElementById("ss").innerHTML = secs;
+
+            if (duration <= 0){
+
+                document.getElementById("dd").innerHTML = 0;
+                document.getElementById("hh").innerHTML = 0;
+                document.getElementById("mm").innerHTML = 0;
+                document.getElementById("ss").innerHTML = 0;
+                var end = document.querySelector(".end");
+                end.style.display = "block";
+                end.style.color = "red";
+                end.style.textAlign = "center";
+            }
+        }, 1000)
+
+
+    </script>
+</body>
+
+</html>

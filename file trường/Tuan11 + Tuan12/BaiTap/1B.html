@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/1B.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Thông tin bài vừa nhập</h1>
+    <div id="container">
+        <table class="table">
+            <th colspan="2">
+                <h1>Thông tin người gửi</h1>
+            </th>
+            <tr>
+                <td>* Người gửi: </td>
+                <td class="red" id="nguoigui"></td>
+            </tr>
+            <tr>
+                <td>* E-Mail: </td>
+                <td class="red" id="mail">fdfsdfd</td>
+            </tr>
+            <tr>
+                <td>* Điện thoại:</td>
+                <td class="red" id="phone"></td>
+            </tr>
+
+        </table>    
+        <table class="table">
+            <th colspan="2">
+                <h1>Thông tin người nhận</h1>
+            </th>
+            <tr>
+                <td>* Thông tin người nhận: </td>
+                <td class="red"></td>
+            </tr>
+            <tr>
+                <td>* Điện thoại: </td>
+                <td class="red"></td>
+            </tr>
+            <tr>
+                <td>* Địa chỉ: </td>
+                <td class="red"></td>
+            </tr>
+            <tr>
+                <td>* Tỉnh/TP: </td>
+                <td class="red"></td>
+            </tr>
+            <tr>
+                <td>* Quận: </td>
+                <td class="red"></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        document.getElementById("nguoigui").innerHTML = sessionStorage.getItem("nameng")
+        document.getElementById("mail").innerHTML = sessionStorage.getItem("mailng")
+        document.getElementById("phone").innerHTML = sessionStorage.getItem("phoneng")
+        sessionStorage.clear()
+        </script>
+</body>
+</html>

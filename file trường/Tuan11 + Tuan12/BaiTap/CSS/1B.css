@@ -1,0 +1,17 @@
+.container{
+    width: 80vw;
+    height: 600px;
+    margin: 0 auto;
+}
+.table{
+    width: 50%;
+    height: 400px;
+    margin: 0 auto;
+}
+table tr td:first-child{
+    width: 30%;
+}
+table th{
+    background-color: #888;
+    width: 100%;
+}

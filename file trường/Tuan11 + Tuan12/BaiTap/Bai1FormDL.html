@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+	td{
+		height:50px;}
+	input {
+		height:50px;
+		margin-left:20px;}
+	.dd{
+		color:red;
+		text-transform:bold;}
+</style>
+
+</head>
+
+
+<body>
+	<form name="F1" method="post" style="border:#666 solid 1px; width:65%; margin:0 auto; border-radius:5px; ">
+    	<table style="margin:0 auto;">
+        	<tr bgcolor="#CCCCCC">
+                <td colspan="2"><h3 style="margin-left:20px;">THÔNG TIN NGƯỜI GỬI</h3></td>
+            </tr>
+            <tr>
+                <td>* Người gửi  </td>
+                <td> <input type="text" placeholder="Nhập họ và tên" size="100" id="txt_NameSender" name="txt_NameSender"/></td>
+            </tr>
+            <tr>
+                <td>* E-Mail </td>
+                <td> <input type="text" placeholder="Nhập Email" size="100" id="txt_EmailSender" name="txt_EmailSender"/></td>
+            </tr>
+            <tr>
+                <td>* Điện thoại </td>
+                <td><input type="number" placeholder="Nhập phone" size="100" id="txt_PhoneNumSender" name="txt_PhoneNumSender"/></td>
+            </tr>
+        </table>
+    
+    <BR />
+    
+    	<table style="margin:0 auto;">
+        	<tr bgcolor="#CCCCCC">
+                <td colspan="2"><h3 style="margin-left:20px;">THÔNG TIN NGƯỜI NHẬN</h3></td>
+            </tr>
+            <tr>
+                <td>* Người nhận  </td>
+                <td> <input type="text" placeholder="Nhập họ và tên" size="100" id="txt_NameReciever" name="txt_NameReciever"/></td>
+            </tr>
+            <tr>
+                <td>* Điện thoại </td>
+                <td> <input type="number" placeholder="Nhập điện thoại" size="100" id="txt_PhoneNumReciever" name="txt_PhoneNumReciever"/></td>
+            </tr>
+            <tr>
+                <td>* Địa chỉ </td>
+                <td> <input type="text" placeholder="Nhập địa chỉ" size="100" id="txt_AddReciever" name="txt_AddReciever"/>
+            </tr>
+             <tr>
+                <td>* Tỉnh/TP </td>
+                <td> <select name="DDL_City" style="margin-left:20px; width:620px; height:50px;" id="DDL_City">
+                    	<option value="TP.HCM nội thành">TP.HCM nội thành</option>
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Huế">Huế</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                        <option value="Quảng Ninh">Quảng Ninh</option>
+                        <option value="Cần Thơ">Cần Thơ</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>* Quận </td>
+                <td> <select name="DDL_District" style="margin-left:20px; width:620px; height:50px;" id="DDL_District">
+                        <option value="Quận 1">Quận 1</option>
+                        <option value="Quận 2">Quận 2</option>
+                        <option value="Quận 3">Quận 3</option>
+                        <option value="Quận Tân Phú">Quận Tân Phú</option>
+                        <option value="Quận Tân Bình">Quận Tân Bình</option>
+                        <option value="Quận Thủ Đức">Quận Thủ Đức</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <center><input type="button" value="GỬI THÔNG TIN" /> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="./1B.html"><input type="button" value="GỬI THÔNG TIN SANG&nbsp; TRANG 1B" style="background:#09F;" onclick="sos()"/></a></center>
+        
+    </form>
+    <br />
+<hr /> 
+<br />  
+	<h2 align="center" class="dd">THÔNG TIN BẠN VỪA NHẬP</h2> 
+    <div style="border:#666 solid 1px; width:48%; margin:0 auto; border-radius:5px; ">
+    	<table style="margin:0 auto;">
+        	<tr bgcolor="#CCCCCC">
+                <td colspan="2"><h3 style="margin-left:20px;">THÔNG TIN NGƯỜI GỬI</h3></td>
+            </tr>
+            <tr>
+                <td>* Người gửi  </td>
+                <td id="TenNG" class="dd"> </td>
+            </tr>
+            <tr>
+                <td>* E-Mail </td>
+                <td id="EmailNG" class="dd"> </td>
+            </tr>
+            <tr>
+                <td>* Điện thoại </td>
+                <td id="PhoneNG" class="dd"> </td>
+            </tr>
+        </table> 
+    <BR />   
+    	<table style="margin:0 auto;">
+        	<tr bgcolor="#CCCCCC">
+                <td colspan="2"><h3 style="margin-left:20px;">THÔNG TIN NGƯỜI NHẬN</h3></td>
+            </tr>
+            <tr>
+                <td>* Người nhận  </td>
+                <td id="TenNN" class="dd"> </td>
+            </tr>
+            <tr>
+                <td>* Điện thoại </td>
+                <td id="PhoneNN" class="dd"> </td>
+            </tr>
+            <tr>
+                <td>* Địa chỉ </td>
+                <td id="AddressNN" class="dd"> </td>
+            </tr>
+            <tr>
+                <td>* Tỉnh/TP </td>
+                <td id="CityNN" class="dd"> 
+                </td>
+            </tr>
+            <tr>
+                <td>* Quận </td>
+                <td id="DistrictNN" class="dd"> 
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function sos()
+        {
+            sessionStorage.nameng = document.getElementById("txt_NameSender").value
+            sessionStorage.mailng = document.getElementById("txt_EmailSender").value
+            sessionStorage.phoneng = document.getElementById("txt_PhoneNumSender").value
+            sessionStorage.
+        }
+    </script>
+</body>
+</html>

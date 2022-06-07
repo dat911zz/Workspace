@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/DangNhap.css">
+    <link rel="stylesheet" href="./bs/css/bootstrap.min.css">
+    <script src="./bs/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <form class="LoginForm" name="Login" method="#">
+        <div class="f-logo">
+            <img src="./Images/logoHufi.JPG" alt="">
+        </div>
+        <div class="f-header-text">
+            ĐĂNG NHẬP HỆ THỐNG
+        </div>
+        <h5>Email</h5>
+        <input type="email" name="mail" id="input-email" placeholder="Nhập Email">
+        <span id="errEmail">Vui lòng kiểm tra Email!</span>
+        <h5>Password</h5>
+        <input type="password" name="pass" id="input-pass" placeholder="Nhập Password">
+        <span id="errPass">Kiểm tra lại pass phải từ 10 ký tự!</span>
+        <input type="submit" value = "Đăng Nhập" id = "input-submit">
+    </form>
+</body>
+<script>
+    var submit = document.getElementById('input-submit');
+    var email = document.getElementById('input-email');
+    var pass = document.getElementById('input-pass');
+    var errEmail = document.getElementById('errEmail');
+    var errPass = document.getElementById('errPass');
+    submit.onclick = function() {
+        var cMail = ktEmail();
+        var cPass = ktPass();
+        sessionStorage.account = email.value;
+        if(cMail == false) {
+            errEmail.style.display = 'block';
+        } else {errEmail.style.display = 'none'}
+        if(cPass == false) {
+            errPass.style.display = 'block';
+        } else {errPass.style.display = 'none'}
+        if(cMail == true && cPass == true) {
+            document.querySelector('.LoginForm').action = 'Bai5b.html';
+        }
+    }
+    function ktEmail() {
+            if(!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.value))) {
+                return false;
+            }
+            return true;
+        }
+        function ktPass() {
+            if(pass.value.length <= 10) {
+                return false
+            }
+            return true;
+        }
+</script>
+</html>
